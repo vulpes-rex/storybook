@@ -7,14 +7,15 @@ const TextInput = ({name, label, type, placeholder}) => {
         setValue(e.target.value);
     }
     return (
-        <div>
-            <label htmlFor={name}>{label}</label>
+        <div className="mb-4">
+            <label htmlFor={name} className="block text-gray-700 text-sm font-bold mb-2">{label}</label>
             <input 
                 type={type} 
                 name={name} 
                 value={value}
                 onChange={handleOnChange}
-                placeholder={placeholder} />
+                placeholder={placeholder} 
+                className="shadow appearance-none border rounded w-full py-2 px-3 ext-gray-700 leading-light focus:outline-none focus:shadow-outline" />
         </div>
     );
 };
